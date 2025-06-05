@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bonnes pratiques - Guide de création de prompts IA - AGIRabcd</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/default.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="bg-primary text-white py-4">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-8">
+                    <h1>Bonnes pratiques transversales</h1>
+                    <p class="lead">Guide de création de prompts IA - AGIRabcd</p>
+                </div>
+                <div class="col-md-4 text-end">
+                    <button class="btn btn-light" id="theme-toggle">
+                        <i class="fas fa-moon"></i> Mode sombre
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarMain">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Accueil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="methodologie.html">Méthodologie</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            Domaines d'intervention
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="domaines/decrochage.html">Prévention du décrochage scolaire</a></li>
+                            <li><a class="dropdown-item" href="domaines/autonomie.html">Renforcement de l'autonomie</a></li>
+                            <li><a class="dropdown-item" href="domaines/integration.html">Trouver sa place en France</a></li>
+                            <li><a class="dropdown-item" href="domaines/emploi.html">Recherche et maintien de l'emploi</a></li>
+                            <li><a class="dropdown-item" href="domaines/isolement.html">Prévention de l'isolement</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="exemples.html">Exemples de prompts</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="bonnes-pratiques.html">Bonnes pratiques</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="evaluation.html">Évaluation</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="ressources.html">Ressources</a>
+                    </li>
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Rechercher..." aria-label="Rechercher">
+                    <button class="btn btn-outline-light" type="submit">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container my-5">
+        <div class="row">
+            <div class="col-lg-8">
+                <section class="mb-5">
+                    <h2>Bonnes pratiques transversales</h2>
+                    <p class="lead">Au-delà des spécificités de chaque domaine d'intervention, certaines bonnes pratiques s'appliquent à l'ensemble des prompts créés pour l'association AGIRabcd. Ces principes garantissent la qualité et l'efficacité des interactions avec l'IA, quelle que soit la thématique abordée.</p>
+                </section>
+
+                <section class="mb-5" id="niveau-linguistique">
+                    <h3>1. Adaptation au niveau linguistique</h3>
+                    <p><strong>Principes fondamentaux :</strong></p>
+                    
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <ul>
+                                <li>Utiliser un vocabulaire accessible sans infantiliser</li>
+                                <li>Définir systématiquement les termes techniques</li>
+                                <li>Privilégier les phrases courtes et la structure active</li>
+                                <li>Répéter les informations importantes sous différentes formes</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <p>L'adaptation au niveau linguistique est essentielle pour garantir la compréhension des informations par les bénéficiaires. Il ne s'agit pas de simplifier à l'extrême, mais d'ajuster le discours en fonction des capacités de compréhension du public cible.</p>
+                    
+                    <div class="alert alert-success">
+                        <h4 class="h5"><i class="fas fa-check-circle me-2"></i> Bonne pratique</h4>
+                        <p class="mb-0">Précisez dans votre prompt le niveau de langue à adopter et les termes à éviter ou à définir systématiquement. Par exemple : "Utilise un vocabulaire simple mais non infantilisant, définis les termes administratifs et évite les anglicismes."</p>
+                    </div>
+                </section>
+
+                <section class="mb-5" id="specificites-culturelles">
+                    <h3>2. Prise en compte des spécificités culturelles</h3>
+                    <p><strong>Éléments à intégrer :</strong></p>
+                    
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <ul>
+                                <li>Références culturelles partagées</li>
+                                <li>Codes sociaux du pays d'origine</li>
+                                <li>Rapport à l'autorité et à l'apprentissage</li>
+                                <li>Rôles sociaux traditionnels (genre, âge, famille)</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <p>La dimension culturelle influence profondément la réception et l'interprétation des informations. Pour être efficace, l'IA doit adapter son discours aux références culturelles du public cible, tout en évitant les stéréotypes.</p>
+                    
+                    <div class="alert alert-success">
+                        <h4 class="h5"><i class="fas fa-check-circle me-2"></i> Bonne pratique</h4>
+                        <p class="mb-0">Incluez dans votre prompt des informations sur l'origine culturelle du public et les adaptations nécessaires. Par exemple : "Tiens compte du fait que dans la culture d'origine de cette personne, la relation à l'autorité est très hiérarchique et que la prise de parole en public peut être intimidante."</p>
+                    </div>
+                </section>
+
+                <section class="mb-5" id="approche-pedagogique">
+                    <h3>3. Approche pédagogique différenciée</h3>
+                    <p><strong>Stratégies recommandées :</strong></p>
+                    
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <ul>
+                                <li>Partir des acquis et de l'expérience</li>
+                                <li>Proposer plusieurs modalités d'apprentissage</li>
+                                <li>Respecter les rythmes individuels</li>
+                                <li>Valoriser les progrès, même minimes</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <p>Chaque personne apprend différemment, selon son histoire, ses capacités et ses préférences. Une approche pédagogique différenciée permet de s'adapter à cette diversité et d'optimiser les apprentissages.</p>
+                    
+                    <div class="alert alert-success">
+                        <h4 class="h5"><i class="fas fa-check-circle me-2"></i> Bonne pratique</h4>
+                        <p class="mb-0">Spécifiez dans votre prompt les différentes modalités d'apprentissage à proposer. Par exemple : "Présente les informations sous forme visuelle (schémas), auditive (explications) et kinesthésique (exemples concrets à manipuler) pour s'adapter aux différents styles d'apprentissage."</p>
+                    </div>
+                </section>
+
+                <section class="mb-5" id="dimension-emotionnelle">
+                    <h3>4. Dimension émotionnelle et motivationnelle</h3>
+                    <p><strong>Aspects essentiels :</strong></p>
+                    
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <ul>
+                                <li>Reconnaissance de la personne dans sa globalité</li>
+                                <li>Valorisation de ses compétences existantes</li>
+                                <li>Encouragement face aux difficultés</li>
+                                <li>Célébration des réussites</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <p>L'apprentissage et le changement ne sont pas uniquement des processus cognitifs, ils impliquent aussi des émotions. La prise en compte de cette dimension émotionnelle est essentielle pour maintenir la motivation et surmonter les obstacles.</p>
+                    
+                    <div class="alert alert-success">
+                        <h4 class="h5"><i class="fas fa-check-circle me-2"></i> Bonne pratique</h4>
+                        <p class="mb-0">Intégrez dans votre prompt des consignes sur la posture émotionnelle à adopter. Par exemple : "Adopte une attitude empathique et encourageante, valorise systématiquement les efforts et les progrès, même minimes, et normalise les difficultés rencontrées."</p>
+                    </div>
+                </section>
+
+                <section class="mb-5" id="ancrage-realite">
+                    <h3>5. Ancrage dans la réalité sociale</h3>
+                    <p><strong>Critères d'efficacité :</strong></p>
+                    
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <ul>
+                                <li>Exemples tirés de l'environnement des bénéficiaires</li>
+                                <li>Solutions adaptées aux contraintes économiques</li>
+                                <li>Prise en compte des réalités familiales et sociales</li>
+                                <li>Liens avec les dispositifs d'aide existants</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <p>Pour être utiles, les conseils et informations doivent être ancrés dans la réalité sociale des bénéficiaires. Des recommandations déconnectées de leurs contraintes quotidiennes risquent d'être inapplicables et donc inefficaces.</p>
+                    
+                    <div class="alert alert-success">
+                        <h4 class="h5"><i class="fas fa-check-circle me-2"></i> Bonne pratique</h4>
+                        <p class="mb-0">Précisez dans votre prompt les contraintes socio-économiques à prendre en compte. Par exemple : "Propose des solutions réalistes tenant compte du budget limité de la personne (moins de 1000€/mois), de l'absence de véhicule personnel et des horaires de travail atypiques."</p>
+                    </div>
+                </section>
+
+                <section class="mb-5">
+                    <h3>Exemple de prompt intégrant les bonnes pratiques transversales</h3>
+                    
+                    <div class="card mb-4">
+                        <div class="card-header bg-primary text-white">
+                            <h4 class="h5 mb-0">Prompt complet avec bonnes pratiques</h4>
+                        </div>
+                        <div class="card-body">
+                            <pre><code class="language-plaintext">Tu es un conseiller en insertion professionnelle d'AGIRabcd accompagnant une femme de 45 ans d'origine malienne, arrivée en France il y a 5 ans. Elle parle français avec un niveau intermédiaire et a travaillé comme aide à domicile de manière non déclarée. Elle souhaite régulariser sa situation et trouver un emploi stable.
+
+Niveau linguistique : Utilise un vocabulaire simple mais non infantilisant. Définis systématiquement les termes administratifs et évite les acronymes. Répète les informations importantes de différentes manières.
+
+Spécificités culturelles : Dans sa culture d'origine, les démarches administratives sont souvent perçues avec méfiance. Elle accorde une grande importance aux relations personnelles plutôt qu'aux procédures formelles.
+
+Approche pédagogique : Commence par valoriser son expérience professionnelle existante. Propose des explications visuelles (schémas simples) et des exemples concrets. Décompose chaque démarche en étapes très progressives.
+
+Dimension émotionnelle : Adopte une posture rassurante face à ses craintes administratives. Valorise sa démarche de régularisation comme un acte courageux et responsable. Encourage sa persévérance face aux obstacles.
+
+Ancrage dans la réalité : Tiens compte de sa situation de mère célibataire avec trois enfants, de son budget très limité (RSA) et de l'absence de permis de conduire. Oriente vers les dispositifs d'aide spécifiques aux femmes en insertion et aux personnes migrantes.
+
+Ton objectif est de lui expliquer les étapes pour faire reconnaître son expérience professionnelle et obtenir une certification dans le secteur de l'aide à la personne, en tenant compte de toutes ces spécificités.</code></pre>
+                            <button class="btn btn-sm btn-outline-primary copy-prompt mt-2">
+                                <i class="fas fa-copy me-1"></i> Copier
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <p>Cet exemple illustre comment intégrer l'ensemble des bonnes pratiques transversales dans un prompt complet. Chaque dimension est explicitement adressée, ce qui permet à l'IA de produire une réponse parfaitement adaptée au contexte spécifique de la personne accompagnée.</p>
+                </section>
+            </div>
+
+            <div class="col-lg-4">
+                <div class="card mb-4 sticky-top" style="top: 2rem; z-index: 999;">
+                    <div class="card-header bg-primary text-white">
+                        <h3 class="h5 mb-0">Dans cette section</h3>
+                    </div>
+                    <div class="card-body">
+                        <nav class="nav flex-column">
+                            <a class="nav-link" href="#niveau-linguistique">1. Adaptation au niveau linguistique</a>
+                            <a class="nav-link" href="#specificites-culturelles">2. Prise en compte des spécificités culturelles</a>
+                            <a class="nav-link" href="#approche-pedagogique">3. Approche pédagogique différenciée</a>
+                            <a class="nav-link" href="#dimension-emotionnelle">4. Dimension émotionnelle et motivationnelle</a>
+                            <a class="nav-link" href="#ancrage-realite">5. Ancrage dans la réalité sociale</a>
+                        </nav>
+                    </div>
+                </div>
+
+                <div class="card mb-4">
+                    <div class="card-header bg-secondary text-white">
+                        <h3 class="h5 mb-0">Ressources complémentaires</h3>
+                    </div>
+                    <div class="card-body">
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">
+                                <a href="methodologie.html" class="text-decoration-none">
+                                    <i class="fas fa-arrow-right me-2"></i> Méthodologie générale
+                                </a>
+                            </li>
+                            <li class="list-group-item">
+                                <a href="evaluation.html" class="text-decoration-none">
+                                    <i class="fas fa-arrow-right me-2"></i> Indicateurs de qualité
+                                </a>
+                            </li>
+                            <li class="list-group-item">
+                                <a href="exemples.html" class="text-decoration-none">
+                                    <i class="fas fa-arrow-right me-2"></i> Bibliothèque d'exemples
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header bg-info text-white">
+                        <h3 class="h5 mb-0">Téléchargements</h3>
+                    </div>
+                    <div class="card-body">
+                        <p>Téléchargez nos ressources pour faciliter la création de prompts :</p>
+                        <a href="#" class="btn btn-outline-info w-100 mb-2">
+                            <i class="fas fa-download me-2"></i> Checklist des bonnes pratiques (PDF)
+                        </a>
+                        <a href="#" class="btn btn-outline-info w-100">
+                            <i class="fas fa-download me-2"></i> Modèle de prompt (DOCX)
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h3 class="h5">Guide de création de prompts IA</h3>
+                    <p>Association AGIRabcd - ONG reconnue d'utilité publique</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <ul class="list-inline mb-0">
+                        <li class="list-inline-item">
+                            <a href="#" class="text-white">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="#" class="text-white">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="#" class="text-white">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="my-3">
+            <div class="row">
+                <div class="col-md-6">
+                    <p class="small mb-0">&copy; 2025 AGIRabcd. Tous droits réservés.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <p class="small mb-0">
+                        <a href="#" class="text-white">Mentions légales</a> |
+                        <a href="#" class="text-white">Politique de confidentialité</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+    <script src="js/script.js"></script>
+    <script>
+        // Additional script for copy buttons on prompt examples
+        document.addEventListener('DOMContentLoaded', function() {
+            const copyButtons = document.querySelectorAll('.copy-prompt');
+            
+            copyButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const promptText = this.parentNode.querySelector('pre code').innerText;
+                    
+                    navigator.clipboard.writeText(promptText).then(() => {
+                        const originalText = this.innerHTML;
+                        this.innerHTML = '<i class="fas fa-check me-1"></i> Copié!';
+                        
+                        setTimeout(() => {
+                            this.innerHTML = originalText;
+                        }, 2000);
+                    }).catch(err => {
+                        console.error('Failed to copy text: ', err);
+                        this.innerHTML = '<i class="fas fa-times me-1"></i> Erreur!';
+                        
+                        setTimeout(() => {
+                            this.innerHTML = '<i class="fas fa-copy me-1"></i> Copier';
+                        }, 2000);
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>
+

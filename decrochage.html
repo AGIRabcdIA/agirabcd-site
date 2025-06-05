@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prévention du décrochage scolaire - Guide de création de prompts IA - AGIRabcd</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/default.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="bg-primary text-white py-4">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-8">
+                    <h1>Prévention du décrochage scolaire</h1>
+                    <p class="lead">Guide de création de prompts IA - AGIRabcd</p>
+                </div>
+                <div class="col-md-4 text-end">
+                    <button class="btn btn-light" id="theme-toggle">
+                        <i class="fas fa-moon"></i> Mode sombre
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarMain">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">Accueil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../methodologie.html">Méthodologie</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown">
+                            Domaines d'intervention
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item active" href="decrochage.html">Prévention du décrochage scolaire</a></li>
+                            <li><a class="dropdown-item" href="autonomie.html">Renforcement de l'autonomie</a></li>
+                            <li><a class="dropdown-item" href="integration.html">Trouver sa place en France</a></li>
+                            <li><a class="dropdown-item" href="emploi.html">Recherche et maintien de l'emploi</a></li>
+                            <li><a class="dropdown-item" href="isolement.html">Prévention de l'isolement</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../exemples.html">Exemples de prompts</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../bonnes-pratiques.html">Bonnes pratiques</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../evaluation.html">Évaluation</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../ressources.html">Ressources</a>
+                    </li>
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Rechercher..." aria-label="Rechercher">
+                    <button class="btn btn-outline-light" type="submit">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container my-5">
+        <div class="row">
+            <div class="col-lg-8">
+                <section class="mb-5">
+                    <h2>Prévention du décrochage scolaire</h2>
+                    <p class="lead">Ce domaine d'intervention vise à accompagner les élèves en difficulté scolaire pour prévenir l'abandon prématuré de leur scolarité. Les prompts IA adaptés à ce domaine doivent prendre en compte les spécificités des publics jeunes, leurs difficultés d'apprentissage et leur environnement socio-culturel.</p>
+                </section>
+
+                <section class="mb-5" id="aide-devoirs">
+                    <h3>Aide aux devoirs</h3>
+                    <p>L'aide aux devoirs constitue un axe majeur de la prévention du décrochage scolaire. Les prompts dans ce domaine doivent permettre à l'IA d'accompagner les élèves dans leurs apprentissages tout en renforçant leur confiance en eux et leur autonomie.</p>
+                    
+                    <div class="card mb-4">
+                        <div class="card-header bg-light">
+                            <h4 class="h5 mb-0">Exemple 1: Mathématiques - Collège</h4>
+                        </div>
+                        <div class="card-body">
+                            <pre><code class="language-plaintext">Tu es un accompagnateur pédagogique spécialisé dans l'aide aux devoirs pour l'association AGIRabcd. Tu aides un élève de 4ème en difficulté scolaire issu d'un quartier prioritaire. L'élève a des lacunes en mathématiques et manque de confiance en lui. Ton rôle est de l'accompagner dans la résolution d'un problème de géométrie en utilisant une approche bienveillante et progressive. Tu dois décomposer chaque étape, valoriser ses réussites partielles et proposer des méthodes mnémotechniques adaptées. Évite le jargon technique et utilise des exemples de la vie quotidienne.</code></pre>
+                            <button class="btn btn-sm btn-outline-primary copy-prompt mt-2">
+                                <i class="fas fa-copy me-1"></i> Copier
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="card mb-4">
+                        <div class="card-header bg-light">
+                            <h4 class="h5 mb-0">Exemple 2: Français - Lycée</h4>
+                        </div>
+                        <div class="card-body">
+                            <pre><code class="language-plaintext">Tu es un tuteur bénévole d'AGIRabcd accompagnant un lycéen en classe de première scientifique dont les parents ne parlent pas français et ne peuvent l'aider. L'élève doit rédiger une dissertation de français sur le romantisme. Tu dois l'accompagner méthodologiquement en expliquant la structure dissertative, en l'aidant à analyser les textes, et en lui proposant un plan détaillé. Adapte ton vocabulaire à son niveau et propose des exemples d'œuvres accessibles. Encourage son autonomie progressive.</code></pre>
+                            <button class="btn btn-sm btn-outline-primary copy-prompt mt-2">
+                                <i class="fas fa-copy me-1"></i> Copier
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="alert alert-info">
+                        <i class="fas fa-lightbulb me-2"></i> <strong>Conseil :</strong> Pour l'aide aux devoirs, veillez à toujours préciser le niveau scolaire, la matière concernée et les difficultés spécifiques de l'élève. Cela permettra à l'IA de calibrer précisément son niveau d'explication.
+                    </div>
+                </section>
+
+                <section class="mb-5" id="connaissance-metiers">
+                    <h3>Connaissance des métiers et de l'entreprise</h3>
+                    <p>La découverte du monde professionnel est un facteur de motivation scolaire important. Les prompts dans ce domaine doivent permettre à l'IA de présenter les métiers de manière concrète et accessible, en tenant compte des réalités socio-économiques des élèves.</p>
+                    
+                    <div class="card mb-4">
+                        <div class="card-header bg-light">
+                            <h4 class="h5 mb-0">Exemple 1: Présentation des métiers de la logistique</h4>
+                        </div>
+                        <div class="card-body">
+                            <pre><code class="language-plaintext">Tu es un professionnel expérimenté intervenant pour AGIRabcd auprès de collégiens de 3ème pour leur présenter les métiers du secteur de la logistique. Ton public est composé d'élèves de milieux populaires qui connaissent mal le monde de l'entreprise. Tu dois présenter 5 métiers différents du secteur en expliquant les formations requises, les conditions de travail, les perspectives d'évolution et les salaires. Utilise un langage accessible, des témoignages concrets et mets l'accent sur les opportunités d'emploi dans leur région (Île-de-France). Évite les stéréotypes et présente la diversité des profils.</code></pre>
+                            <button class="btn btn-sm btn-outline-primary copy-prompt mt-2">
+                                <i class="fas fa-copy me-1"></i> Copier
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="card mb-4">
+                        <div class="card-header bg-light">
+                            <h4 class="h5 mb-0">Exemple 2: Métiers du numérique pour décrocheurs</h4>
+                        </div>
+                        <div class="card-body">
+                            <pre><code class="language-plaintext">Tu es un entrepreneur social qui présente les métiers du numérique à des jeunes décrocheurs suivis par AGIRabcd. Ces jeunes ont entre 16 et 20 ans, ont quitté le système scolaire et sont éloignés de l'emploi. Tu dois démystifier le secteur du numérique en présentant des métiers accessibles sans diplôme d'ingénieur, expliquer les formations courtes possibles et mettre l'accent sur les soft skills valorisés. Utilise des exemples de réussites de jeunes issus de milieux similaires et propose des étapes concrètes pour s'orienter vers ces métiers.</code></pre>
+                            <button class="btn btn-sm btn-outline-primary copy-prompt mt-2">
+                                <i class="fas fa-copy me-1"></i> Copier
+                            </button>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="mb-5" id="recherche-stages">
+                    <h3>Aide à la recherche de stages</h3>
+                    <p>La recherche de stages est souvent un moment critique pour les élèves issus de milieux défavorisés qui manquent de réseau professionnel. Les prompts dans ce domaine doivent permettre à l'IA d'accompagner concrètement les jeunes dans leurs démarches.</p>
+                    
+                    <div class="card mb-4">
+                        <div class="card-header bg-light">
+                            <h4 class="h5 mb-0">Exemple 1: Stage en milieu rural</h4>
+                        </div>
+                        <div class="card-body">
+                            <pre><code class="language-plaintext">Tu es un conseiller en insertion professionnelle d'AGIRabcd aidant un élève de seconde professionnelle commerce à trouver un stage de 4 semaines. L'élève habite en zone rurale, n'a pas de réseau professionnel et ses parents sont au chômage. Tu dois l'accompagner dans l'identification des entreprises cibles, la rédaction de sa lettre de motivation et la préparation aux entretiens. Fournis une méthodologie de recherche systématique, des modèles de courriers et des conseils pour valoriser ses compétences malgré son jeune âge.</code></pre>
+                            <button class="btn btn-sm btn-outline-primary copy-prompt mt-2">
+                                <i class="fas fa-copy me-1"></i> Copier
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="card mb-4">
+                        <div class="card-header bg-light">
+                            <h4 class="h5 mb-0">Exemple 2: Stage pour étudiante d'origine étrangère</h4>
+                        </div>
+                        <div class="card-body">
+                            <pre><code class="language-plaintext">Tu es un mentor d'AGIRabcd accompagnant une étudiante en BTS Assistant de Gestion qui cherche un stage de fin d'études. Elle est d'origine étrangère, maîtrise bien le français mais manque de codes culturels français du monde professionnel. Tu dois l'aider à comprendre les attentes des recruteurs, à adapter son CV aux standards français, et à se préparer aux entretiens. Explique les subtilités culturelles de la communication professionnelle française et propose des simulations d'entretien adaptées.</code></pre>
+                            <button class="btn btn-sm btn-outline-primary copy-prompt mt-2">
+                                <i class="fas fa-copy me-1"></i> Copier
+                            </button>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="mb-5" id="securite-routiere">
+                    <h3>Attestation Scolaire de Sécurité Routière</h3>
+                    <p>La préparation à l'ASSR est un moment important de la scolarité. Les prompts dans ce domaine doivent permettre à l'IA d'adapter son discours pédagogique aux différents profils d'élèves, y compris ceux en difficulté d'apprentissage.</p>
+                    
+                    <div class="card mb-4">
+                        <div class="card-header bg-light">
+                            <h4 class="h5 mb-0">Exemple 1: Préparation ASSR1</h4>
+                        </div>
+                        <div class="card-body">
+                            <pre><code class="language-plaintext">Tu es un formateur en sécurité routière intervenant pour AGIRabcd auprès d'élèves de 5ème pour les préparer à l'ASSR1. Ton public comprend des élèves ayant des difficultés de concentration et de compréhension. Tu dois expliquer les règles de circulation des cyclistes en utilisant des supports visuels, des cas pratiques et des moyens mnémotechniques. Adapte ton discours aux réalités urbaines de leur quotidien et insiste sur les enjeux de sécurité sans dramatiser.</code></pre>
+                            <button class="btn btn-sm btn-outline-primary copy-prompt mt-2">
+                                <i class="fas fa-copy me-1"></i> Copier
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="card mb-4">
+                        <div class="card-header bg-light">
+                            <h4 class="h5 mb-0">Exemple 2: Préparation ASSR2 pour élèves en situation de handicap</h4>
+                        </div>
+                        <div class="card-body">
+                            <pre><code class="language-plaintext">Tu es un éducateur spécialisé d'AGIRabcd préparant des élèves de 3ème à l'ASSR2, dont certains sont en situation de handicap léger. Tu dois aborder les règles concernant les cyclomoteurs en utilisant une pédagogie différenciée. Décompose chaque notion en étapes simples, utilise des exemples concrets de leur environnement et propose des exercices progressifs. Assure-toi que chaque élève puisse progresser à son rythme.</code></pre>
+                            <button class="btn btn-sm btn-outline-primary copy-prompt mt-2">
+                                <i class="fas fa-copy me-1"></i> Copier
+                            </button>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <div class="col-lg-4">
+                <div class="card mb-4 sticky-top" style="top: 2rem; z-index: 999;">
+                    <div class="card-header bg-primary text-white">
+                        <h3 class="h5 mb-0">Dans cette section</h3>
+                    </div>
+                    <div class="card-body">
+                        <nav class="nav flex-column">
+                            <a class="nav-link" href="#aide-devoirs">Aide aux devoirs</a>
+                            <a class="nav-link" href="#connaissance-metiers">Connaissance des métiers</a>
+                            <a class="nav-link" href="#recherche-stages">Aide à la recherche de stages</a>
+                            <a class="nav-link" href="#securite-routiere">Attestation Scolaire de Sécurité Routière</a>
+                            <a class="nav-link" href="#risques-routiers">Prévention des risques routiers</a>
+                            <a class="nav-link" href="#reseaux-sociaux">Bon usage des réseaux sociaux</a>
+                            <a class="nav-link" href="#parents-eleves">Actions pour les parents d'élèves</a>
+                            <a class="nav-link" href="#conteurs-metiers">Conteurs de métiers</a>
+                        </nav>
+                    </div>
+                </div>
+
+                <div class="card mb-4">
+                    <div class="card-header bg-secondary text-white">
+                        <h3 class="h5 mb-0">Autres domaines</h3>
+                    </div>
+                    <div class="card-body">
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">
+                                <a href="autonomie.html" class="text-decoration-none">
+                                    <i class="fas fa-arrow-right me-2"></i> Renforcement de l'autonomie
+                                </a>
+                            </li>
+                            <li class="list-group-item">
+                                <a href="integration.html" class="text-decoration-none">
+                                    <i class="fas fa-arrow-right me-2"></i> Trouver sa place en France
+                                </a>
+                            </li>
+                            <li class="list-group-item">
+                                <a href="emploi.html" class="text-decoration-none">
+                                    <i class="fas fa-arrow-right me-2"></i> Recherche et maintien de l'emploi
+                                </a>
+                            </li>
+                            <li class="list-group-item">
+                                <a href="isolement.html" class="text-decoration-none">
+                                    <i class="fas fa-arrow-right me-2"></i> Prévention de l'isolement
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header bg-info text-white">
+                        <h3 class="h5 mb-0">Ressources pédagogiques</h3>
+                    </div>
+                    <div class="card-body">
+                        <p>Consultez notre bibliothèque de ressources pédagogiques pour compléter vos prompts :</p>
+                        <a href="../ressources.html" class="btn btn-outline-info w-100">
+                            <i class="fas fa-book me-2"></i> Accéder aux ressources
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h3 class="h5">Guide de création de prompts IA</h3>
+                    <p>Association AGIRabcd - ONG reconnue d'utilité publique</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <ul class="list-inline mb-0">
+                        <li class="list-inline-item">
+                            <a href="#" class="text-white">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="#" class="text-white">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="#" class="text-white">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="my-3">
+            <div class="row">
+                <div class="col-md-6">
+                    <p class="small mb-0">&copy; 2025 AGIRabcd. Tous droits réservés.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <p class="small mb-0">
+                        <a href="#" class="text-white">Mentions légales</a> |
+                        <a href="#" class="text-white">Politique de confidentialité</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+    <script src="../js/script.js"></script>
+    <script>
+        // Additional script for copy buttons on prompt examples
+        document.addEventListener('DOMContentLoaded', function() {
+            const copyButtons = document.querySelectorAll('.copy-prompt');
+            
+            copyButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const promptText = this.parentNode.querySelector('pre code').innerText;
+                    
+                    navigator.clipboard.writeText(promptText).then(() => {
+                        const originalText = this.innerHTML;
+                        this.innerHTML = '<i class="fas fa-check me-1"></i> Copié!';
+                        
+                        setTimeout(() => {
+                            this.innerHTML = originalText;
+                        }, 2000);
+                    }).catch(err => {
+                        console.error('Failed to copy text: ', err);
+                        this.innerHTML = '<i class="fas fa-times me-1"></i> Erreur!';
+                        
+                        setTimeout(() => {
+                            this.innerHTML = '<i class="fas fa-copy me-1"></i> Copier';
+                        }, 2000);
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>
+

@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ressources - Guide de création de prompts IA - AGIRabcd</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/default.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="bg-primary text-white py-4">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-8">
+                    <h1>Ressources</h1>
+                    <p class="lead">Guide de création de prompts IA - AGIRabcd</p>
+                </div>
+                <div class="col-md-4 text-end">
+                    <button class="btn btn-light" id="theme-toggle">
+                        <i class="fas fa-moon"></i> Mode sombre
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarMain">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Accueil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="methodologie.html">Méthodologie</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            Domaines d'intervention
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="domaines/decrochage.html">Prévention du décrochage scolaire</a></li>
+                            <li><a class="dropdown-item" href="domaines/autonomie.html">Renforcement de l'autonomie</a></li>
+                            <li><a class="dropdown-item" href="domaines/integration.html">Trouver sa place en France</a></li>
+                            <li><a class="dropdown-item" href="domaines/emploi.html">Recherche et maintien de l'emploi</a></li>
+                            <li><a class="dropdown-item" href="domaines/isolement.html">Prévention de l'isolement</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="exemples.html">Exemples de prompts</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="bonnes-pratiques.html">Bonnes pratiques</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="evaluation.html">Évaluation</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="ressources.html">Ressources</a>
+                    </li>
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Rechercher..." aria-label="Rechercher">
+                    <button class="btn btn-outline-light" type="submit">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container my-5">
+        <h2>Ressources complémentaires recommandées</h2>
+        <p class="lead">Cette section fournit des ressources complémentaires pour approfondir vos connaissances sur la création de prompts efficaces et vous tenir informé des dernières données sociales pertinentes.</p>
+        
+        <div class="row mt-5">
+            <div class="col-lg-12">
+                <h3>Sources d'information actualisées</h3>
+                <div class="card-group">
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                <i class="fas fa-chart-bar text-primary me-2"></i>
+                                Statistiques INSEE
+                            </h5>
+                            <p class="card-text">Statistiques INSEE sur la précarité et l'exclusion sociale (2024-2025)</p>
+                            <a href="https://www.insee.fr/fr/statistiques" target="_blank" class="btn btn-outline-primary">
+                                <i class="fas fa-external-link-alt me-1"></i> Consulter
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                <i class="fas fa-file-alt text-success me-2"></i>
+                                Rapports des organismes sociaux
+                            </h5>
+                            <p class="card-text">Rapports annuels des organismes sociaux (CAF, Pôle Emploi, etc.)</p>
+                            <div class="mt-2">
+                                <a href="https://www.caf.fr/rapports-et-etudes" target="_blank" class="btn btn-sm btn-outline-success me-2">
+                                    <i class="fas fa-external-link-alt me-1"></i> CAF
+                                </a>
+                                <a href="https://www.pole-emploi.org/statistiques-analyses/" target="_blank" class="btn btn-sm btn-outline-success">
+                                    <i class="fas fa-external-link-alt me-1"></i> Pôle Emploi
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                <i class="fas fa-search text-info me-2"></i>
+                                Observatoire national
+                            </h5>
+                            <p class="card-text">Études de l'Observatoire national de la pauvreté et de l'exclusion sociale</p>
+                            <a href="https://onpes.gouv.fr/" target="_blank" class="btn btn-outline-info">
+                                <i class="fas fa-external-link-alt me-1"></i> Consulter
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card-group">
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                <i class="fas fa-balance-scale text-warning me-2"></i>
+                                Haut Conseil à l'égalité
+                            </h5>
+                            <p class="card-text">Publications du Haut Conseil à l'égalité entre les femmes et les hommes</p>
+                            <a href="https://www.haut-conseil-egalite.gouv.fr/" target="_blank" class="btn btn-outline-warning">
+                                <i class="fas fa-external-link-alt me-1"></i> Consulter
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                <i class="fas fa-database text-danger me-2"></i>
+                                DARES
+                            </h5>
+                            <p class="card-text">Données de la Direction de l'animation de la recherche, des études et des statistiques (DARES)</p>
+                            <a href="https://dares.travail-emploi.gouv.fr/" target="_blank" class="btn btn-outline-danger">
+                                <i class="fas fa-external-link-alt me-1"></i> Consulter
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                <i class="fas fa-globe text-secondary me-2"></i>
+                                AGIRabcd
+                            </h5>
+                            <p class="card-text">Site officiel de l'association AGIRabcd et ressources internes</p>
+                            <a href="https://www.agirabcd.eu/" target="_blank" class="btn btn-outline-secondary">
+                                <i class="fas fa-external-link-alt me-1"></i> Consulter
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="alert alert-info mt-4">
+            <p class="mb-0">
+                <i class="fas fa-info-circle me-2"></i>Ces références permettent d'ancrer les prompts dans la réalité sociale contemporaine et d'assurer leur pertinence face aux enjeux actuels de l'accompagnement social.
+            </p>
+        </div>
+        
+        <div class="row mt-5">
+            <div class="col-lg-12">
+                <h3>Ressources sur la création de prompts efficaces</h3>
+                <div class="list-group">
+                    <a href="#" class="list-group-item list-group-item-action">
+                        <div class="d-flex w-100 justify-content-between">
+                            <h5 class="mb-1">Guide des bonnes pratiques en prompt engineering</h5>
+                            <small>PDF</small>
+                        </div>
+                        <p class="mb-1">Document complet sur les techniques avancées de création de prompts efficaces</p>
+                    </a>
+                    <a href="#" class="list-group-item list-group-item-action">
+                        <div class="d-flex w-100 justify-content-between">
+                            <h5 class="mb-1">Webinaires de formation AGIRabcd</h5>
+                            <small>Vidéos</small>
+                        </div>
+                        <p class="mb-1">Série de formations en ligne sur l'utilisation de l'IA dans le contexte associatif</p>
+                    </a>
+                    <a href="#" class="list-group-item list-group-item-action">
+                        <div class="d-flex w-100 justify-content-between">
+                            <h5 class="mb-1">Fiches pratiques par domaine d'intervention</h5>
+                            <small>Documents</small>
+                        </div>
+                        <p class="mb-1">Fiches synthétiques adaptées à chaque domaine d'intervention de l'association</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4 mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <p>&copy; 2025 AGIRabcd. Tous droits réservés.</p>
+                </div>
+                <div class="col-md-6 text-end">
+                    <a href="#" class="text-white me-2">Mentions légales</a>
+                    <a href="#" class="text-white">Politique de confidentialité</a>
+                </div>
+            </div>
+            <div class="text-center mt-3">
+                <small>Made with Manus Create my website</small>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
+
