@@ -1,4 +1,4 @@
-// Wait for DOM to be fully loaded
+// Wait for DOM to be fully loaded  pour tester
 document.addEventListener('DOMContentLoaded', function() {
     // Initialize code highlighting
     if (typeof hljs !== 'undefined') {
