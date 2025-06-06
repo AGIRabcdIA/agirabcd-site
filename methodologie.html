@@ -8,6 +8,161 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/default.min.css">
     <link rel="stylesheet" href="css/style.css">
+     <style>
+        /* Variables */
+        :root {
+            --primary-color: #3498db;
+            --secondary-color: #2ecc71;
+            --accent-color: #e74c3c;
+            --text-color: #333333;
+            --bg-color: #f5f5f5;
+            --bg-alt-color: #ffffff;
+            --dark-bg-color: #222222;
+            --dark-text-color: #f5f5f5;
+            --dark-bg-alt-color: #333333;
+            --header-height: 60px;
+        }
+
+        /* Dark Mode */
+        body.dark-mode {
+            --primary-color: #2980b9;
+            --secondary-color: #27ae60;
+            --accent-color: #c0392b;
+            --text-color: #f5f5f5;
+            --bg-color: #222222;
+            --bg-alt-color: #333333;
+        }
+
+        /* Base Styles */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            line-height: 1.6;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        a {
+            color: var(--primary-color);
+            transition: color 0.3s;
+        }
+
+        a:hover {
+            color: var(--secondary-color);
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, var(--primary-color), #1a6ca4);
+            padding: 2rem 0;
+        }
+
+        header h1 {
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Navigation */
+        .navbar {
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar-dark .navbar-nav .nav-link {
+            color: rgba(255, 255, 255, 0.85);
+        }
+
+        .navbar-dark .navbar-nav .nav-link:hover {
+            color: #ffffff;
+        }
+
+        .dropdown-menu {
+            border-radius: 0.25rem;
+            box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+        }
+
+        /* Cards */
+        .card {
+            border: none;
+            border-radius: 0.5rem;
+            box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+            transition: transform 0.3s, box-shadow 0.3s;
+            margin-bottom: 1.5rem;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+        }
+
+        .card-header {
+            border-top-left-radius: 0.5rem !important;
+            border-top-right-radius: 0.5rem !important;
+        }
+
+        /* Buttons */
+        .btn {
+            border-radius: 0.25rem;
+            padding: 0.5rem 1.25rem;
+            font-weight: 500;
+            transition: all 0.3s;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-color);
+            border-color: var(--primary-color);
+        }
+
+        .btn-primary:hover {
+            background-color: #2980b9;
+            border-color: #2980b9;
+        }
+
+        .btn-outline-primary {
+            color: var(--primary-color);
+            border-color: var(--primary-color);
+        }
+
+        .btn-outline-primary:hover {
+            background-color: var(--primary-color);
+            border-color: var(--primary-color);
+        }
+
+        /* Footer */
+        footer {
+            margin-top: 3rem;
+        }
+
+        footer a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            color: #ffffff;
+            text-decoration: underline;
+        }
+
+        /* Responsive */
+        @media (max-width: 767.98px) {
+            header {
+                text-align: center;
+            }
+            
+            header .text-end {
+                text-align: center !important;
+                margin-top: 1rem;
+            }
+            
+            .navbar .form-inline {
+                margin-top: 1rem;
+            }
+        }
+    </style>
 </head>
 <body>
     <!-- Header -->
